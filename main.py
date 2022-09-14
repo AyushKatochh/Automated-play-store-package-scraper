@@ -1,4 +1,5 @@
 from selenium import webdriver
+import mail
 import database
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
@@ -35,4 +36,5 @@ elif x==1:
     print("no version change")
 else:
     print("version changed")
+    mail.mail(name,package_name,version.text, date.text)
     database.update_all(package_name,version.text, date.text)
