@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 require("dotenv").config();
 const mongoURI = process.env.mongoURI;
 
-mongoose.connect("mongodb+srv://ayushkatoch:ayush2002@cluster0.dknvq.mongodb.net/test", {useNewUrlParser: true});
+mongoose.connect("your urit", {useNewUrlParser: true});
 
 
 
