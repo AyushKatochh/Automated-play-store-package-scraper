@@ -9,9 +9,9 @@ A tool made using puppeteer and selenium to perform automated browser scrapping 
 
   
 # Packages used
-⋅⋅* dotenv
-⋅⋅* mongodb
-⋅⋅* mongoose
-⋅⋅* puppeteer
-⋅⋅* selenium-webdriver
-⋅⋅* nodemon as a dev dependency
+*  dotenv
+* mongodb
+* mongoose
+* puppeteer
+* selenium-webdriver
+* nodemon as a dev dependency
