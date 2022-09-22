@@ -1,4 +1,4 @@
-# Autmated-play-store-package-scraper
+# Automated-play-store-package-scraper
 A tool made using puppeteer and selenium to perform automated browser scrapping to extract the version and provide notification to the user whenever the version changes.
 
 # How to Use
