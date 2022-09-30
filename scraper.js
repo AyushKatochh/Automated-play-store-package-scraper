@@ -7,9 +7,10 @@ const mongoURI = process.env.mongoURI;
 
 
 async function scrape() {
-    mongoose.connect("Your_URI", {useNewUrlParser: true});
+    mongoose.connect("URI", {useNewUrlParser: true});
 
     const PackageSchema = new mongoose.Schema({
+    packageName: String,
     version: String,
     updatedDateText: String
 
@@ -49,25 +50,16 @@ const PSchema = new mongoose.model("PSchema", PackageSchema);
         const text = await (await versionElement.getProperty('textContent')).jsonValue();
 
       
-          const selectedDetails = {
-            version: text,
-            updatedDateText: updatedDateText
-        }
-          
-          dataObj = {
-                version: selectedDetails.version,
-                updatedDateText: selectedDetails.updatedDateText
-            }
-          
-           
-             console.log(dataObj);
+        
+         
           
 
           
              
            let collectedData =new PSchema({
-             version: dataObj.version,
-             updatedDateText: dataObj.updatedDateText
+             packageName: PackageName,
+             version: text,
+             updatedDateText: updatedDateText
            });
 
           
@@ -81,7 +73,7 @@ const PSchema = new mongoose.model("PSchema", PackageSchema);
 
            console.log(collectedData);
 
-           
+          //  collectedData.find
 
          
             let previousPackageDate = collectedData.updatedDateText;
