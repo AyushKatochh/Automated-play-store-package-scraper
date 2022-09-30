@@ -3,11 +3,12 @@ const mongoose = require("mongoose");
 require("dotenv").config();
 const mongoURI = process.env.mongoURI;
 
-mongoose.connect("your urit", {useNewUrlParser: true});
 
 
 
 async function scrape() {
+    mongoose.connect("Your_URI", {useNewUrlParser: true});
+
     const PackageSchema = new mongoose.Schema({
     version: String,
     updatedDateText: String
@@ -75,8 +76,22 @@ const PSchema = new mongoose.model("PSchema", PackageSchema);
           
             await collectedData.save().then(console.log("Data Entered Successfully"))
            
+
+
+
            console.log(collectedData);
 
+           
+
+         
+            let previousPackageDate = collectedData.updatedDateText;
+            if(updatedDateText != previousPackageDate) {
+              console.log(`Previous package date: ${previousPackageDate}`);
+            } else {
+              console.log(`updatedDateText ${updatedDateText}`);
+            }
+            
+          
     
         
       
