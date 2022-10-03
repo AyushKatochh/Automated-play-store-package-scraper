@@ -7,7 +7,7 @@ const mongoURI = process.env.mongoURI;
 
 
 async function scrape() {
-    mongoose.connect("URI", {useNewUrlParser: true});
+    mongoose.connect("mongoURI", {useNewUrlParser: true});
 
     const PackageSchema = new mongoose.Schema({
     packageName: String,
