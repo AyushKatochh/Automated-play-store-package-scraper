@@ -65,7 +65,7 @@ const PSchema = new mongoose.model("PSchema", PackageSchema);
           
               
            
-          
+          //
             await collectedData.save().then(console.log("Data Entered Successfully"))
            
 
