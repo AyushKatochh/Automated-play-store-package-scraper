@@ -5,7 +5,7 @@ const mongoURI = process.env.mongoURI;
 
 
 
-
+// async function to scrape package from play store
 async function scrape() {
     mongoose.connect("mongoURI", {useNewUrlParser: true});
 
