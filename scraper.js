@@ -17,6 +17,7 @@ async function scrape() {
 
 })
 
+   // Creating a new scrapper model
 const PSchema = new mongoose.model("PSchema", PackageSchema);
 
     const browser = await puppeteer.launch({ headless: false });
